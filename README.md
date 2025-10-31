@@ -30,16 +30,9 @@ Keep all files locally (e.g. `~/plato-projects/baserow-setup`)
 and mount them directly into the Plato microVM:
 
 ```bash
-plato sims ssh sandbox-24 \
-  --mount ~/plato-projects/baserow-setup:/home/plato/baserow-setup
+scp -r -F /Users/vamsi/.plato/ssh_24.conf ~/plato-projects/baserow-setup sandbox-24:~/baserow-setup
 ````
 
-Now inside the VM:
-
-```bash
-cd ~/baserow-setup
-ls
-```
 
 You should see your full local folder mirrored in the microVM.
 

@@ -42,6 +42,16 @@ You should see your full local folder mirrored in the microVM.
 
 ### 1. Mount the Claude binary
 
+
+
+Copy or mount your local Claude CLI binary into the same VM:
+
+```bash
+scp -F /Users/vamsi/.plato/ssh_24.conf /opt/homebrew/bin/claude sandbox-24:~/claude
+```
+
+Then inside the VM:
+
 Download npm
 
 ```bash
@@ -55,14 +65,6 @@ export NVM_DIR="$HOME/.nvm"
 # Install latest LTS Node
 nvm install --lts
 ```
-
-Copy or mount your local Claude CLI binary into the same VM:
-
-```bash
-scp -F /Users/vamsi/.plato/ssh_24.conf /opt/homebrew/bin/claude sandbox-24:~/claude
-```
-
-Then inside the VM:
 
 ```bash
 chmod +x ~/claude
